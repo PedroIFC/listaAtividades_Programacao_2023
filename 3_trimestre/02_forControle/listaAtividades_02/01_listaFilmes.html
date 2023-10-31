@@ -9,11 +9,21 @@
     */
 
     //ENTRADA
-
+    let drama = []
+    let romance = []
+    let comedia = []
+    const filmes = Number(prompt('Quantos filmes deseja cadastrar:'));
+    for(let i = 0; i < filmes; i++){
+        let nome = prompt(`Qual o Nome do filme?`)
+        let genero = prompt(`Qual o genero do filme "${nome}"?(C-Comedia, R-Romance, D-Drama)`).toUpperCase().trim();
+        (genero == "C")? comedia.push(nome) : (genero == "R")? romance.push(nome) : (genero == "D")? drama.push(nome) : alert("valor invalido")
+    }
+    document.write(`Comedia:<br>${comedia.join(", ")}.<br>Drama:<br>${drama.join(', ')}.<br>Romance:<br>${romance.join(', ')}.`);
     
     //PROCESSAMENTO
     
     
+
     //SAÍDA
     
     

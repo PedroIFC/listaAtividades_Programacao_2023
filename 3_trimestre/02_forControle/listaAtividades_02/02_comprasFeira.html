@@ -15,8 +15,13 @@
     */
 
     //ENTRADA
+    let compras = ["Tomate(Kg)", "Batata(Kg)", "Batata-Doce(Kg)", "Alface(Und)", "Cebola(Kg)", "Cebolinha(Und)", "Beterraba(Kg)"];
+    let precos = [3.90, 3.40, 4.70, 1.50, 2.90, 1.40, 4.10];
+    for(i = 0; i<compras.length; i++){
+        let quantos = Number(prompt(`Quanta(O)s ${compras[i]} foram vendidas?`));
+        document.write(`${compras[i]}: R$${(quantos*precos[i]).toFixed(2)}<br>`)
+    }
 
-    
     //PROCESSAMENTO
     
     
